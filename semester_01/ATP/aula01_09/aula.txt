@@ -1,0 +1,280 @@
+Aula Estruturas condicionais. - Data: 01/09/22
+Lab. ATP – SI e ADS SG – 2/2022
+
+Aluno(a): Gabriel Augusto de Oliveira 
+Profa. Michelle Nery Nascimento
+
+1. A equipe Ferrari (F-1) deseja calcular o número mínimo de litros que deverá colocar no
+tanque de seu carro para que ele possa percorrer um determinado número de voltas até o
+primeiro reabastecimento. Escreva um programa que leia o comprimento da pista (em metros), o
+número total de voltas a serem percorridas no grande prêmio, o número de reabastecimentos
+desejados e o consumo de combustível do carro (em Km/L). Calcular e escrever o número mínimo
+de litros necessários para percorrer até o primeiro reabastecimento. OBS: Considere que o
+número de voltas entre os reabastecimentos é o mesmo
+
+class Main {
+  public static void main(String[] args) {
+    float trackSize, turns, consumption, restocks, value;
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("Digite o tamanho da pista: ");
+    trackSize = input.nextFloat();
+
+    System.out.println("Digite o numero de voltas: ");
+    turns = input.nextFloat();
+
+    System.out.println("Digite o consumo do carro: ");
+    consumption = input.nextFloat();
+
+    System.out.println("Digite a quantidade de reabastecimentos desejados: ");
+    restocks = input.nextFloat();
+    input.close();
+
+    trackSize /= 1000;
+
+    value = ((trackSize * turns) / consumption) / restocks;
+
+    System.out.println("O numero de litros necessários para percorrer até o primeiro reabastecimento é: " + value);
+  }
+}
+
+2. Uma empresa deseja interligar alguns computadores, para isso deseja saber quantos
+switch’s comprar. Faça um programa que leia o número de computadores a serem interligados e a
+quantidade de portas por switch, informe quantos switch’s deverão ser adquiridos. Para cada porta
+do switch pode-se ligar apenas um computador. Considere que todos os switches terão a mesma
+quantidade de portas.
+
+class Main {
+  public static void main(String[] args) {
+    float computers, switchPorts, value;
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("Digite a quantidade de computadores: ");
+    computers = input.nextFloat();
+
+    System.out.println("Digite a quantidade de portas no switch: ");
+    switchPorts = input.nextFloat();
+    input.close();
+
+    value = (computers / switchPorts);
+
+    System.out.println("Deverão ser comprados " + Math.ceil(value) + " switches");
+  }
+}
+
+3. Uma companhia de carros paga a seus empregados um salário de R$ 500,00 por mês
+mais uma comissão de R$ 50,00 para cada carro vendido e mais 5% do valor total da venda.
+Elabore um programa para calcular e imprimir o nome e o salário do vendedor num dado mês
+recebendo como dados de entrada o nome do vendedor, o número de carros vendidos e o valor
+total das vendas.
+
+class Main {
+  public static void main(String[] args) {
+    String name;
+    double selledCars, total, value;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o nome do(a) vendedor(a): ");
+    name = input.next();
+
+    System.out.print("Digite o número de carros vendidos: ");
+    selledCars = input.nextDouble();
+
+    System.out.print("Digite o valor total das vendas: ");
+    total = input.nextDouble();
+    input.close();
+
+    value = (50 * selledCars) + (0.05 * total) + 500;
+
+    System.out.println("O vendedor " + name + " ganhou R$" + value + " neste mês");
+  }
+}
+
+4. Considerando que o índice de reajuste para determinada classe social foi acordado para
+ser um índice de reposição salarial (em porcentagem) mais um índice de produtividade (em
+porcentagem) que cada empresa irá definir, faça um programa que leia o código de um
+funcionário (número inteiro), seu salário atual, o índice de reposição salarial e o de produtividade e
+calcule o novo salário do funcionário. Escrever o código do funcionário, seu salário atual, quanto
+terá de aumento e o novo salário. 
+
+class Main {
+  public static void main(String[] args) {
+    int id;
+    double salary, salaryReplacementIndex, productivityIndex, value;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o ID do funcionário: ");
+    id = input.nextInt();
+
+    System.out.print("Digite o salário atual deste funcionário: ");
+    salary = input.nextDouble();
+
+    System.out.print("Digite o índice de reposição salarial deste funcionário: ");
+    salaryReplacementIndex = input.nextDouble();
+
+    System.out.print("Digite o índice de produtividade deste funcionário: ");
+    productivityIndex = input.nextDouble();
+    input.close();
+
+    value = salary + (salary * (salaryReplacementIndex / 100)) + (salary * (productivityIndex / 100));
+
+    System.out.println("O funcionario com ID " + id + " terá o salário reajustado para R$" + value);
+  }
+}
+
+
+6. A energia gasta em kcal (calorias) com uma atividade aeróbica qualquer obedece a
+seguinte equação: E = MET × PESO × Tempo atividade/60. O tempo é dado em minutos. O peso
+é dado em quilos. METS significa capacidade aeróbica e depende do tipo de exercício. Ciclismo
+ou corrida leve tem pontuação de 7.0 METS. A Natação Crawl tem pontuação de 8.0 METS. Um
+usuário deve entrar com seu peso, quanto tempo ele corre por semana; quanto tempo ele pedala
+por semana e quanto tempo ele nada por semana. O seu programa deve retornar o número de
+calorias que este usuário queima por semana com exercícios físicos. (OBS: os dados acima são
+reais para pessoas até 40 anos.)
+
+class Main {
+  public static void main(String[] args) {
+    double weight, runningTime, pedalingTime, swimTime, value;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite seu peso: ");
+    weight = input.nextDouble();
+
+    System.out.print("Digite, em minutos, quanto tempo você corre por semana: ");
+    runningTime = input.nextDouble();
+
+    System.out.print("Digite, em minutos, quanto tempo você pedala por semana: ");
+    pedalingTime = input.nextDouble();
+
+    System.out.print("Digite, em minutos, quanto tempo você nada por semana: ");
+    swimTime = input.nextDouble();
+    input.close();
+
+    value = (7.0 * weight * (runningTime / 60)) + (7.0 * weight * (pedalingTime / 60))
+        + (8.0 * weight * (swimTime / 60));
+
+    System.out.println("Este usuário queima " + value + " kcal por semana");
+
+  }
+}
+
+7. Escreva um programa que leia três valores inteiros e diferentes e mostre-os em ordem
+decrescente.
+
+class Main {
+  public static void main(String[] args) {
+    int num1, num2, num3;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o primeiro número: ");
+    num1 = input.nextInt();
+
+    System.out.print("Digite o segundo número: ");
+    num2 = input.nextInt();
+
+    if (num2 == num1) {
+      System.out.println("O número deve ser diferente!");
+
+      System.out.print("Digite o segundo número: ");
+      num2 = input.nextInt();
+    }
+
+    System.out.print("Digite o terceiro número: ");
+    num3 = input.nextInt();
+
+    if (num3 == num1 || num3 == num2) {
+      System.out.println("O número deve ser diferente!");
+
+      System.out.print("Digite o terceiro número: ");
+      num3 = input.nextInt();
+    }
+    input.close();
+
+    if (num1 > num2 && num1 > num3) {
+      System.out.print(num1 + ", ");
+    } else if (num2 > num1 && num2 > num3) {
+      System.out.print(num2 + ", ");
+    } else if (num3 > num1 && num3 > num2) {
+      System.out.print(num3 + ", ");
+    }
+
+    if (num1 < num2 && num1 > num3 || num1 > num2 && num1 < num3) {
+      System.out.print(num1 + ", ");
+    } else if (num2 < num1 && num2 > num3 || num2 > num1 && num2 < num3) {
+      System.out.print(num2 + ", ");
+    } else if (num2 < num1 && num2 > num3 || num2 > num1 && num2 < num3) {
+      System.out.print(num2 + ", ");
+    }
+
+    if (num1 < num2 && num1 < num3) {
+      System.out.print(num1);
+    } else if (num2 < num1 && num2 < num3) {
+      System.out.print(num2);
+    } else if (num3 < num1 && num3 < num2) {
+      System.out.print(num3);
+    }
+  }
+}
+
+8. Dados três valores: A, B, C, verificar se eles podem ser valores dos lados de um triângulo e, se
+forem, se é um triângulo escaleno, equilátero ou isósceles, considerando os seguintes conceitos:
+• O comprimento de cada lado de um triângulo é menor do que a soma dos outros dois
+lados.
+• Chama-se equilátero o triângulo que tem três lados iguais. 
+• Denomina-se isósceles o triângulo que tem o comprimento de dois lados iguais.
+• Recebe o nome de escaleno o triângulo que tem os três lados diferentes.
+
+class Main {
+  public static void main(String[] args) {
+    int side1, side2, side3;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o primeiro número: ");
+    side1 = input.nextInt();
+
+    System.out.print("Digite o segundo número: ");
+    side2 = input.nextInt();
+
+    System.out.print("Digite o terceiro número: ");
+    side3 = input.nextInt();
+    input.close();
+
+    if (side1 + side2 < side3) {
+      System.out.println("Triângulo não existe");
+    } else if (side1 + side3 < side2) {
+      System.out.println("Triângulo não existe");
+    } else if (side3 + side2 < side1) {
+      System.out.println("Triângulo não existe");
+    } else if (side1 == side2 && side1 == side3) {
+      System.out.println("Triângulo equilátero");
+    } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+      System.out.println("Triângulo isósceles");
+    } else if (side1 != side2 || side1 != side3 || side2 != side3) {
+      System.out.println("Triângulo escaleno");
+    }
+  }
+}
+
+9. Faça um programa que leia três valores A, B, C e imprima na tela esses valores se a soma de A
++ B for menor que C. 
+
+class Main {
+  public static void main(String[] args) {
+    int num1, num2, num3;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o primeiro número: ");
+    num1 = input.nextInt();
+
+    System.out.print("Digite o segundo número: ");
+    num2 = input.nextInt();
+
+    System.out.print("Digite o terceiro número: ");
+    num3 = input.nextInt();
+    input.close();
+
+    if ((num1 + num2) < num3) {
+      System.out.println(num1 + ", " + num2 + ", " + num3);
+    }
+  }
+}
