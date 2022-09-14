@@ -1,0 +1,146 @@
+Aula Estruturas condicionais. - Data: 08/09/22
+Lab. ATP – SI e ADS SG – 2/2022
+
+Aluno(a): Nome do aluno(a)
+Profa. Michelle Nery Nascimento
+
+1. Criar um programa que receba o valor de x, e calcule e imprima o valor de f(x).
+
+class Main {
+  public static void main(String[] args) {
+    double value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite um valor: ");
+    value = input.nextDouble();
+
+    input.close();
+
+    if (value <= 1) {
+      System.out.println("f(x): 1");
+
+    } else if (value > 1 && value <= 2) {
+      System.out.println("f(x): 2");
+
+    } else if (value > 2 && value <= 3) {
+      System.out.println("f(x): " + Math.pow(value, 2));
+
+    } else if (value > 3) {
+      System.out.println("f(x): " + Math.pow(value, 3));
+
+    }
+  }
+}
+
+2. A sequência de Fibonacci tem papel importante na explicação de fenômenos naturais. Ela é
+também bastante utilizada para fins estéticos, pela sua reconhecida harmonia. Exemplo
+disso foi sua utilização na construção do Partenon, em Atenas. A sequência dá-se
+inicialmente por dois números 1. A partir do terceiro elemento usa-se a expressão: elementon
+= elementon-1 + elementon-2. Exemplo de sequência: 1, 1, 2, 3, 5, 8. Construa um programa
+que imprima na tela os n primeiros elementos da sequência de Fibonacci, onde n é
+informado pelo usuário.
+
+class Main {
+  public static void main(String[] args) {
+    int value, control1 = 0, control2 = 1, next;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite quantos valores de fibonacci você quer saber: ");
+    value = input.nextInt();
+
+    input.close();
+
+    for (int i = 1; i <= value; i++) {
+      System.out.print(control1 + " ");
+      next = control1 + control2;
+      control1 = control2;
+      control2 = next;
+    }
+  }
+}
+
+
+3. Escreva um programa que encontre o quinto número maior que 1000, cuja divisão por 11
+tenha resto 5.
+
+
+4. Chico tem 1,50m e cresce 2 centímetros por ano, enquanto Juca tem 1,10m e cresce 3
+centímetros por ano. Construir um programa que calcule e imprima quantos anos serão
+necessários para que Juca seja maior que Chico.
+
+
+5. Seja a seguinte série: 1, 4, 4, 2, 5, 5, 3, 6, 6, 4, 7, 7, ...
+Escreva um programa que seja capaz de gerar os N termos dessa série. Esse número N
+deve ser lido do teclado.
+
+
+6. Criar um programa que imprima todos os números inteiros e positivos no intervalo
+aberto entre 10 e 100 de modo que:
+- não terminem em zero;
+- se o dígito da direita for removido, o número restante é divisor do número original
+Exemplos:
+28: 2 é divisor de 28
+36: 3 é divisor de 36
+
+
+7. Determine se um determinado ano lido e bissexto. Sendo que um ano é bissexto se for
+divisível por 400 ou se for divisível por 4 e não for divisível por 100. Por exemplo: 1988,
+1992, 1996.
+
+
+8. Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado possui
+uma taxa diferente de imposto sobre o produto (MG 7%; SP 12%; RJ 15%; MS 8%). Fac.a
+um programa em que o usuário entre com o valor e o estado destino do produto e o programa
+retorne o preço final do produto acrescido do imposto do estado em que ele será vendido.
+Se o estado digitado não for válido, mostrar uma mensagem de erro.
+
+9. Faça um programa que leia a distância em Km e a quantidade de litros de gasolina
+consumidos por um carro em um percurso, calcule o consumo em Km/l e escreva uma
+mensagem de acordo com a tabela abaixo:
+
+
+10. A nota final de um estudante e calculada a partir de três notas atribuídas entre o intervalo
+de 0 até 10, respectivamente, a um trabalho de laboratório, a uma avaliação semestral e a
+um exame final. A média das três notas mencionadas anteriormente obedece aos pesos:
+Trabalho de laboratório: 2; Avaliação Semestral: 3; Exame Final: 5. De acordo com o
+resultado, mostre na tela se o aluno está reprovado (média entre 0 e 2,9), de recuperação
+(entre 3 e 4,9) ou se foi aprovado. Faça todas as verificações necessárias.
+
+
+11. Usando switch, escreva um programa que leia um inteiro entre 1 e 12 e imprima o mês
+correspondente a este número. Isto é, janeiro se 1, fevereiro se 2, e assim por diante.
+
+
+12. As tarifas de certo parque de estacionamento são as seguintes:
+• 1a e a 2ª hora: R$ 1,00 cada
+• 3ª e 4ª hora - R$ 1,40 cada
+• 5ª hora e seguintes - R$ 2,00 cada
+O número de horas a pagar é sempre inteiro e arredondado por excesso. Deste modo, quem
+estacionar durante 61 minutos pagará por duas horas, que é o mesmo que pagaria se tivesse
+permanecido 120 minutos. Os momentos de chegada ao parque e partida deste são
+apresentados na forma de pares de inteiros, representando horas e minutos. Por exemplo,
+o par 12 50 representara “dez para a uma da tarde”. Pretende-se criar um programa que,
+lidos pelo teclado os momentos de chegada e de partida, escreva na tela o preço cobrado
+pelo estacionamento. Admite-se que a chegada e a partida se dão com intervalo não superior
+a 24 horas. Portanto, se uma dada hora de chegada for superior à da partida, isso não é
+uma situação de erro, antes significar a que a partida ocorreu no dia seguinte ao da chegada.
+
+
+13. Faça um programa que calcule o IMC de uma pessoa e mostre sua classificação de acordo
+com a tabela abaixo:
+
+
+14. O custo ao consumidor de um carro novo é a soma do custo de fábrica, da comissão do
+distribuidor, e dos impostos. A comissão e os impostos são calculados sobre o custo de
+fábrica, de acordo com a tabela abaixo. Leia o custo de fábrica e escreva o custo ao
+consumidor.
+
+
+15. Escreva o menu de opções abaixo. Leia a opção do usuário e execute a operação escolhida.
+Escreva uma mensagem de erro se a opção for inválida. Escolha a opção:
+(a) Soma de 2 números;
+(b) Diferença entre 2 números (maior pelo menor);
+(c) Produto entre 2 números;
+(d) Divisão entre 2 números (considere que o denominador não será zero).
