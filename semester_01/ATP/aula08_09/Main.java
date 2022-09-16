@@ -1,21 +1,34 @@
 import java.util.*;
 
-// 3. Escreva um programa que encontre o quinto número maior que 1000, cuja divisão por 11
-// tenha resto 5.
+// 9. Faça um programa que leia a distância em Km e a quantidade de litros de gasolina
+// consumidos por um carro em um percurso, calcule o consumo em Km/l e escreva uma
+// mensagem de acordo com a tabela abaixo:
 
 class Main {
   public static void main(String[] args) {
-    int cont = 1;
+    float distance, liters, value;
 
-    for (int i = 1000; (i % 11 == 5); i++) {
-      System.out.println("cont: " + cont);
+    Scanner input = new Scanner(System.in);
 
-      // if (cont == 5) {
-      // System.out.print("Valor: " + i);
-      // }
-      cont += 1;
+    System.out.print("Digite a quantidade de quilometros: ");
+    distance = input.nextFloat();
+
+    System.out.print("Digite a quantidade de litros: ");
+    liters = input.nextFloat();
+
+    input.close();
+
+    value = distance / liters;
+
+    if (value < 8) {
+      System.out.println("Venda o carro!");
+
+    } else if (value <= 12) {
+      System.out.println("Economico!");
+
+    } else if (value > 12) {
+      System.out.println("Super economico!");
 
     }
-
   }
 }

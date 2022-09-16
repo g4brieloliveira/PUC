@@ -1,7 +1,7 @@
-Aula Estruturas condicionais. - Data: 08/09/22
+Aula Estruturas condicionais. - Data: 15/09/22
 Lab. ATP – SI e ADS SG – 2/2022
 
-Aluno(a): Nome do aluno(a)
+Aluno(a): Gabriel Augusto de Oliveira Pinto
 Profa. Michelle Nery Nascimento
 
 1. Criar um programa que receba o valor de x, e calcule e imprima o valor de f(x).
@@ -65,15 +65,67 @@ class Main {
 3. Escreva um programa que encontre o quinto número maior que 1000, cuja divisão por 11
 tenha resto 5.
 
+class Main {
+  public static void main(String[] args) {
+    int cont = 1, value = 1000;
+
+    while (cont <= 5) {
+      if (value % 11 == 5) {
+        if (cont == 5) {
+          System.out.println("O valor procurado e o " + value);
+        }
+        cont++;
+      }
+      value++;
+    }
+  }
+}
+
 
 4. Chico tem 1,50m e cresce 2 centímetros por ano, enquanto Juca tem 1,10m e cresce 3
 centímetros por ano. Construir um programa que calcule e imprima quantos anos serão
 necessários para que Juca seja maior que Chico.
 
+class Main {
+  public static void main(String[] args) {
+    float chicoHeight = 1.5f, jucaHeight = 1.1f;
+    int years = 0;
+
+    while (chicoHeight >= jucaHeight) {
+      years += 1;
+      chicoHeight += 0.02f;
+      jucaHeight += 0.03f;
+    }
+
+    System.out.println("Juca sera mais alto em " + years + " anos.");
+  }
+}
+
 
 5. Seja a seguinte série: 1, 4, 4, 2, 5, 5, 3, 6, 6, 4, 7, 7, ...
 Escreva um programa que seja capaz de gerar os N termos dessa série. Esse número N
 deve ser lido do teclado.
+
+class Main {
+  public static void main(String[] args) {
+    int count, num1 = 1, num2 = 4;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite quanto numeros da sequencia voce quer ver: ");
+    count = input.nextInt();
+
+    input.close();
+
+    for (int i = 0; i < count; i += 3) {
+      System.out.print(num1 + ", ");
+      num1++;
+      System.out.print(num2 + ", ");
+      System.out.print(num2 + ", ");
+      num2++;
+    }
+  }
+}
 
 
 6. Criar um programa que imprima todos os números inteiros e positivos no intervalo
@@ -84,10 +136,39 @@ Exemplos:
 28: 2 é divisor de 28
 36: 3 é divisor de 36
 
+class Main {
+  public static void main(String[] args) {
+    for (int i = 10; i <= 100; i++) {
+      if (i % 10 != 0 && i % (i / 10) == 0) {
+        System.out.print(i + ", ");
+      }
+    }
+  }
+}
+
 
 7. Determine se um determinado ano lido e bissexto. Sendo que um ano é bissexto se for
 divisível por 400 ou se for divisível por 4 e não for divisível por 100. Por exemplo: 1988,
 1992, 1996.
+
+class Main {
+  public static void main(String[] args) {
+    int year;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite o ano: ");
+    year = input.nextInt();
+
+    input.close();
+
+    if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+      System.out.println("O ano " + year + " e bissexto.");
+    } else {
+      System.out.println("O ano " + year + " nao e bissexto.");
+    }
+  }
+}
 
 
 8. Uma empresa vende o mesmo produto para quatro diferentes estados. Cada estado possui
@@ -96,9 +177,75 @@ um programa em que o usuário entre com o valor e o estado destino do produto e 
 retorne o preço final do produto acrescido do imposto do estado em que ele será vendido.
 Se o estado digitado não for válido, mostrar uma mensagem de erro.
 
+class Main {
+  public static void main(String[] args) {
+    String UF;
+    float value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite o estado desejado (MG, SP, RJ ou MS): ");
+    UF = input.next().toUpperCase();
+    System.out.print("Digite o valor: ");
+    value = input.nextFloat();
+
+    input.close();
+
+    switch (UF) {
+      case "MG":
+        System.out.println("O valor acrescido de imposto é igual a R$" + (value + (value * 0.07)));
+        break;
+
+      case "SP":
+        System.out.println("O valor acrescido de imposto é igual a R$" + (value + (value * 0.12)));
+        break;
+
+      case "RJ":
+        System.out.println("O valor acrescido de imposto é igual a R$" + (value + (value * 0.15)));
+        break;
+
+      case "MS":
+        System.out.println("O valor acrescido de imposto é igual a R$" + (value + (value * 0.08)));
+        break;
+
+      default:
+        System.out.println("O estado digitado não é válido");
+    }
+  }
+}
+
 9. Faça um programa que leia a distância em Km e a quantidade de litros de gasolina
 consumidos por um carro em um percurso, calcule o consumo em Km/l e escreva uma
 mensagem de acordo com a tabela abaixo:
+
+class Main {
+  public static void main(String[] args) {
+    float distance, liters, value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite a quantidade de quilometros: ");
+    distance = input.nextFloat();
+
+    System.out.print("Digite a quantidade de litros: ");
+    liters = input.nextFloat();
+
+    input.close();
+
+    value = distance / liters;
+
+    if (value < 8) {
+      System.out.println("Venda o carro!");
+
+    } else if (value <= 12) {
+      System.out.println("Economico!");
+
+    } else if (value > 12) {
+      System.out.println("Super economico!");
+
+    }
+  }
+}
 
 
 10. A nota final de um estudante e calculada a partir de três notas atribuídas entre o intervalo
@@ -108,9 +255,92 @@ Trabalho de laboratório: 2; Avaliação Semestral: 3; Exame Final: 5. De acordo
 resultado, mostre na tela se o aluno está reprovado (média entre 0 e 2,9), de recuperação
 (entre 3 e 4,9) ou se foi aprovado. Faça todas as verificações necessárias.
 
+class Main {
+  public static void main(String[] args) {
+    float lab, semesterExam, finalExam, value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite a nota do trabalho de laboratório: ");
+    lab = input.nextFloat();
+
+    System.out.print("Digite a nota da avaliação semestral: ");
+    semesterExam = input.nextFloat();
+
+    System.out.print("Digite a nota do exame final: ");
+    finalExam = input.nextFloat();
+
+    input.close();
+
+    value = ((lab * 2) + (semesterExam * 3) + (finalExam * 5)) / 10;
+
+    if (value <= 2.9f) {
+      System.out.println("Aluno reprovado com a media: " + value);
+    } else if (value <= 4.9) {
+      System.out.println("Aluno de recuperação com a media: " + value);
+    } else if (value >= 5) {
+      System.out.println("Aluno aprovado com a media: " + value);
+    }
+  }
+}
+
 
 11. Usando switch, escreva um programa que leia um inteiro entre 1 e 12 e imprima o mês
 correspondente a este número. Isto é, janeiro se 1, fevereiro se 2, e assim por diante.
+
+class Main {
+  public static void main(String[] args) {
+    int month;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite um número entre 1 e 12: ");
+    month = input.nextInt();
+
+    input.close();
+
+    switch (month) {
+      case 1:
+        System.out.println("O numero " + month + " corresponde ao mês de Janeiro");
+        break;
+      case 2:
+        System.out.println("O numero " + month + " corresponde ao mês de Fevereiro");
+        break;
+      case 3:
+        System.out.println("O numero " + month + " corresponde ao mês de Março");
+        break;
+      case 4:
+        System.out.println("O numero " + month + " corresponde ao mês de Abril");
+        break;
+      case 5:
+        System.out.println("O numero " + month + " corresponde ao mês de Maio");
+        break;
+      case 6:
+        System.out.println("O numero " + month + " corresponde ao mês de Junho");
+        break;
+      case 7:
+        System.out.println("O numero " + month + " corresponde ao mês de Julho");
+        break;
+      case 8:
+        System.out.println("O numero " + month + " corresponde ao mês de Agosto");
+        break;
+      case 9:
+        System.out.println("O numero " + month + " corresponde ao mês de Setembro");
+        break;
+      case 10:
+        System.out.println("O numero " + month + " corresponde ao mês de Outubro");
+        break;
+      case 11:
+        System.out.println("O numero " + month + " corresponde ao mês de Novembro");
+        break;
+      case 12:
+        System.out.println("O numero " + month + " corresponde ao mês de Dezembro");
+        break;
+      default:
+        System.out.println("Este número não corresponde a nenhum mês");
+    }
+  }
+}
 
 
 12. As tarifas de certo parque de estacionamento são as seguintes:
@@ -127,15 +357,116 @@ pelo estacionamento. Admite-se que a chegada e a partida se dão com intervalo n
 a 24 horas. Portanto, se uma dada hora de chegada for superior à da partida, isso não é
 uma situação de erro, antes significar a que a partida ocorreu no dia seguinte ao da chegada.
 
+class Main {
+  public static void main(String[] args) {
+    int arrivalHour, arrivalMins, departureHour, departureMins, value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite a hora de chegada: ");
+    arrivalHour = input.nextInt();
+
+    System.out.print("Digite o minuto de chegada: ");
+    arrivalMins = input.nextInt();
+
+    System.out.print("Digite a hora de partida: ");
+    departureHour = input.nextInt();
+
+    System.out.print("Digite o minuto de partida: ");
+    departureMins = input.nextInt();
+
+    input.close();
+
+    value = departureMins - arrivalMins > 0 ? (departureHour - arrivalHour + 1) : (departureHour - arrivalHour);
+
+    if (value <= 2) {
+      System.out.println("O consumidor ira pagar R$ " + value * 1.0);
+
+    } else if (value <= 4) {
+      System.out.println("O consumidor ira pagar R$ " + (2 + ((value - 2.0) * 1.4)));
+
+    } else if (value >= 5) {
+      System.out
+          .println("O consumidor ira pagar R$ " + (2 + 2.8 + ((value - 4) * 2.00)));
+
+    }
+  }
+}
+
 
 13. Faça um programa que calcule o IMC de uma pessoa e mostre sua classificação de acordo
 com a tabela abaixo:
+
+class Main {
+  public static void main(String[] args) {
+    float weight, height, value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite seu peso: ");
+    weight = input.nextFloat();
+
+    System.out.print("Digite sua altura: ");
+    height = input.nextFloat();
+
+    input.close();
+
+    value = weight / (height * height);
+
+    if (value < 18.5) {
+      System.out.println("Abaixo do peso");
+
+    } else if (value < 25) {
+      System.out.println("Saudavel");
+
+    } else if (value < 30) {
+      System.out.println("Peso em excesso");
+
+    } else if (value < 35) {
+      System.out.println("Obesidade Grau I");
+
+    } else if (value < 40) {
+      System.out.println("Obesidade Grau II (severa)");
+
+    } else if (value >= 40) {
+      System.out.println("Obesidade Grau III (morbida)");
+
+    }
+  }
+}
 
 
 14. O custo ao consumidor de um carro novo é a soma do custo de fábrica, da comissão do
 distribuidor, e dos impostos. A comissão e os impostos são calculados sobre o custo de
 fábrica, de acordo com a tabela abaixo. Leia o custo de fábrica e escreva o custo ao
 consumidor.
+
+class Main {
+  public static void main(String[] args) {
+    float cost, value;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite o custo de fábrica: ");
+    cost = input.nextFloat();
+
+    input.close();
+
+    if (cost <= 12000) {
+      value = cost + (cost * 0.05f);
+      System.out.println("Valor final R$ " + value);
+
+    } else if (cost <= 25000) {
+      value = cost + (cost * 0.10f) + (cost * 0.15f);
+      System.out.println("Valor final R$ " + value);
+
+    } else if (cost > 25000) {
+      value = cost + (cost * 0.15f) + (cost * 0.20f);
+      System.out.println("Valor final R$ " + value);
+
+    }
+  }
+}
 
 
 15. Escreva o menu de opções abaixo. Leia a opção do usuário e execute a operação escolhida.
@@ -144,3 +475,50 @@ Escreva uma mensagem de erro se a opção for inválida. Escolha a opção:
 (b) Diferença entre 2 números (maior pelo menor);
 (c) Produto entre 2 números;
 (d) Divisão entre 2 números (considere que o denominador não será zero).
+
+class Main {
+  public static void main(String[] args) {
+    int option;
+    float num1, num2;
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("\033[H\033[2J");
+
+    System.out.print("Digite o PRIMEIRO numero: ");
+    num1 = input.nextFloat();
+
+    System.out.print("Digite o SEGUNDO numero: ");
+    num2 = input.nextFloat();
+
+    System.out.println("\033[H\033[2J");
+
+    System.out.print(
+        "Menu: \n1 - Soma de 2 números\n2 - Diferença entre 2 números\n3 - Produto entre 2 números\n4 - Divisão entre 2 números\n\n");
+
+    System.out.print("Digite o numero da opção: ");
+    option = input.nextInt();
+
+    input.close();
+
+    switch (option) {
+      case 1:
+        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+        break;
+
+      case 2:
+        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+        break;
+
+      case 3:
+        System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+        break;
+
+      case 4:
+        System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+        break;
+
+      default:
+        System.out.println("Opção inválida");
+    }
+  }
+}
