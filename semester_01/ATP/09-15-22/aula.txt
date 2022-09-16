@@ -1,0 +1,113 @@
+Aula Estruturas condicionais. - Data: 15/09/22
+Lab. ATP – SI e ADS SG – 2/2022
+
+Aluno(a): Gabriel Augusto de Oliveira Pinto
+Profa. Michelle Nery Nascimento
+
+1. Escreva um programa que leia 3 valores inteiros e diferentes e mostre-os em ordem
+decrescente.
+
+
+2. Escreva um programa para calcular a soma de 10 números quaisquer fornecidos pelo
+usuário
+
+
+3. Escreva um programa para ler a idade de 40 pessoas, exibir a idade da pessoa mais nova,
+calcular a idade média e calcular a porcentagem de pessoas com idade entre 24 e 30 anos.
+
+
+4. Deseja-se fazer uma pesquisa a respeito do consumo mensal de energia elétrica em uma
+determinada cidade. Para isso, são fornecidos os seguintes dados:
+• preço do kWh consumido;
+• número do consumidor;
+• quantidade de kWh consumidos durante o mês;
+O número de consumidores que participarão da pesquisa é igual a 80. Faça um algoritmo que
+leia os dados descritos acima, calcule e imprima
+(a) para cada consumidor, o total a pagar,
+(b) o maior consumo verificado,
+(c) o menor consumo verificado,
+(d) a média geral de consumo.
+
+
+5. Desenvolver um programa que efetue a soma de todos os números ímpares que são
+múltiplos de três e que se encontram no conjunto dos números de 500 até 2100.
+
+
+6. Escrever um programa que leia 60 números e conte quantos deles estão nos seguintes
+intervalos: [0-25], [26-50], [51-75] e [76-100].
+
+
+7. Faça um programa que leia um valor A e um valor N. Calcule e imprima a soma dos N
+primeiros números a partir de A (inclusive). Considere que não será lido um valor negativo
+para N.
+Exemplo:
+A N SOMA
+3 2 (3+4) = 7
+4 5 (4+5+6+7+8) = 30
+
+
+8. Escreva um programa para calcular e escrever o valor de S:
+S = 1/1 + 2/4 + 4/16 + 5/25 + 6/36 + ... 10/100
+
+
+9. Faça um programa que escreva a tabuada de multiplicação de todos os números inteiros
+de 2 a 9.
+
+
+10. A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
+dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja saber: 
+a) média da idade da população;
+b) média do número de filhos;
+c) maior idade;
+d) percentual de pessoas acima de 60 anos.
+O final da leitura de dados se dará com a entrada de uma idade negativa.
+
+
+11. O departamento que controla o índice de poluição do meio ambiente mantém 3 grupos
+de indústrias que são altamente poluentes do meio ambiente. O índice de poluição aceitável
+varia de 0,05 até 0,25. Se o índice sobe para 0,3 as indústrias do primeiro grupo são intimadas
+a suspenderem suas atividades, se o índice cresce para 0,4 as do primeiro e segundo grupo
+são intimadas a suspenderem suas atividades e se o índice atingir 0,5 todos os 3 grupos devem
+ser notificados a paralisarem suas atividades. Faça um algoritmo que lê o índice de poluição
+medido e emite a notificação adequada aos diferentes grupos de empresas.
+
+
+12. Construir um programa para fazer um levantamento estatístico das respostas de uma
+prova tipo múltipla escolha, considerando que a prova contém 50 questões e que cada
+questão possui 5 opções: A, B, C, D e E. O algoritmo deve apresentar os
+percentuais relativos às quantidades de respostas A, B, C, D e E.
+
+
+13. Faça um programa para ler as coordenadas (X, Y) de uma quantidade indeterminada de
+pontos no sistema cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O
+algoritmo será encerrado quando as duas coordenadas digitadas forem 0 (nesta situação, sair
+sem escrever mensagem alguma).
+Para os dados de entrada abaixo Deve ser gerada a seguinte saída
+2 2 primeiro quadrante
+3 -2 quarto quadrante
+4 7 primeiro quadrante
+-8 -1 terceiro quadrante
+-7 1 segundo quadrante
+
+
+14.A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
+dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja
+saber:
+• média da idade da população;
+• média do número de filhos;
+• maior idade;
+• percentual de pessoas acima de 60 anos.
+O final da leitura de dados se dará com a entrada de uma idade negativa.
+
+
+15. Crie um programa que peça um número inteiro ao usuário, e imprima a seguinte tabela:
+1
+2 4
+3 6 9
+4 8 12 16
+..
+
+
+16.Faça um programa para calcular o k-ésimo dígito da direita para a esquerda de um número
+n. Suponha que k é menor ou igual ao número de dígitos de n. Exemplo: o 3o dígito de 1984
+é 9.
