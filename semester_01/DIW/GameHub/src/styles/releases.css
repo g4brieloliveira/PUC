@@ -1,23 +1,23 @@
-.esports {
+.releases {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
-.esports h1 {
-  color: var(--black);
+.releases h1 {
+  color: var(--white);
   font-weight: 700;
 }
 
-.esports .cards {
+.releases .cards {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.esports .card {
+.releases .card {
   width: 300px;
   height: 150px;
   background-color: red;
