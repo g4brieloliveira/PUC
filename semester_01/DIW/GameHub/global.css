@@ -1,0 +1,42 @@
+:root {
+  --title-color: #322153;
+  --primary-color: #34cb79;
+  --secondary-color: #190fe6;
+
+  --white: #f0f0f5;
+  --black: #0c0c0c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 700;
+}
+a:hover {
+  transition: 0.2s ease all;
+  scale: 0.95;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--black);
+}

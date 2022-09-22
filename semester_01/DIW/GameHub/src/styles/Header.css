@@ -1,0 +1,37 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  height: 60px;
+  background-color: var(--primary-color);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .links {
+  display: flex;
+  flex-direction: row;
+}
+
+header .links a {
+  margin: 0 5px;
+}
+
+header .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .input img {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
