@@ -1,0 +1,14 @@
+.esports {
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.esports .card {
+  width: 350px;
+  height: 200px;
+  background-color: red;
+  border-radius: 8px;
+  margin: auto;
+}
