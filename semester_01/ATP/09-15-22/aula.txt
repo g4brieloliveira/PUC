@@ -7,14 +7,88 @@ Profa. Michelle Nery Nascimento
 1. Escreva um programa que leia 3 valores inteiros e diferentes e mostre-os em ordem
 decrescente.
 
+class Main {
+  public static void main(String[] args) {
+    int num1, num2, num3;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite o primeiro número: ");
+    num1 = input.nextInt();
+
+    System.out.print("Digite o segundo número: ");
+    num2 = input.nextInt();
+
+    System.out.print("Digite o terceiro número: ");
+    num3 = input.nextInt();
+
+    input.close(); 
+
+    System.out.print((num1 > num2) && (num1 > num3) ? num1 : (num2 > num3) ? num2 : num3 );
+
+    System.out.print((num1 > num2) && (num1 > num3) ? ((num2 > num3) ? num2 : num3) : ((num1 < num2) && (num1 < num3) ? ((num2 < num3) ? num2 : num3) : num1) );
+
+    System.out.print((num1 < num2) && (num1 < num3) ? num1 : (num2 < num3) ? num2 : num3 );
+  }
+}
 
 2. Escreva um programa para calcular a soma de 10 números quaisquer fornecidos pelo
 usuário
 
+class Main {
+  public static void main(String[] args) {
+    int inputedNum, value = 0, count = 1;
+
+    Scanner input = new Scanner(System.in);
+
+    while (count <= 10 ) {
+      System.out.print("Digite o "+ count +"º número: ");
+      inputedNum = input.nextInt();
+
+      value += inputedNum;
+      count++;
+    }
+
+    input.close(); 
+
+    System.out.println("O resultado final é: "+value);
+  }
+}
 
 3. Escreva um programa para ler a idade de 40 pessoas, exibir a idade da pessoa mais nova,
 calcular a idade média e calcular a porcentagem de pessoas com idade entre 24 e 30 anos.
 
+class Main {
+  public static void main(String[] args) {
+    int inputedNum, total = 0, count = 1, younger = 100, interval = 0;
+
+    Scanner input = new Scanner(System.in);
+
+    while (count <= 40 ) {
+      System.out.print("Digite a "+ count +"ª idade: ");
+      inputedNum = input.nextInt();
+
+      if (count == 1) {
+        younger = inputedNum;
+      }
+
+      younger = inputedNum < younger ? inputedNum : younger;
+
+      if (inputedNum >= 24 && inputedNum <= 30) {
+        interval++;
+      }
+
+      total += inputedNum;
+      count++;
+    }
+
+    input.close(); 
+
+    System.out.println("A média é: "+total/40.0f);
+    System.out.println("A pessoa mais nova tem: "+younger+" anos");
+    System.out.println("A média das pessoas entre 24 e 30 anos é: "+(interval*100)/40.0f);
+  }
+}
 
 4. Deseja-se fazer uma pesquisa a respeito do consumo mensal de energia elétrica em uma
 determinada cidade. Para isso, são fornecidos os seguintes dados:
@@ -28,13 +102,101 @@ leia os dados descritos acima, calcule e imprima
 (c) o menor consumo verificado,
 (d) a média geral de consumo.
 
+class Main {
+  public static void main(String[] args) {
+    int price, amount, value, code, larger = Integer.MIN_VALUE, smaller = Integer.MAX_VALUE, counter = 0;
+    float sum = 0;
+
+    Scanner input = new Scanner(System.in);
+
+    while (counter < 80) {
+      System.out.print("Digite o preço do kWh consumido: ");
+      price = input.nextInt();
+
+      System.out.print("Digite o número do consumidor: ");
+      code = input.nextInt();
+
+      System.out.print("Digite a quantidade de kWh consumidos durante o mês: ");
+      amount = input.nextInt();
+
+      input.close();
+
+      value = price * amount;
+      System.out.println("O consumidor de numero " + code + " ira pagar o total: " + value);
+
+      if (amount > larger) {
+        larger = amount;
+      }
+
+      if (amount < smaller) {
+        smaller = amount;
+      }
+
+      sum += amount;
+      counter++;
+    }
+
+    System.out.println("Maior consumo: " + larger);
+    System.out.println("Menor consumo: " + smaller);
+    System.out.println("Média do consumo: " + sum / 80);
+
+  }
+}
+
 
 5. Desenvolver um programa que efetue a soma de todos os números ímpares que são
 múltiplos de três e que se encontram no conjunto dos números de 500 até 2100.
 
+class Main {
+  public static void main(String[] args) {
+    for (int i = 500; i <= 2100; i++) {
+
+      if (i % 3 == 0 && i % 2 != 0) {
+        System.out.print(i + ", ");
+      }
+    }
+  }
+}
+
 
 6. Escrever um programa que leia 60 números e conte quantos deles estão nos seguintes
 intervalos: [0-25], [26-50], [51-75] e [76-100].
+
+class Main {
+  public static void main(String[] args) {
+    int num, count1 = 0, count2 = 0, count3 = 0, count4 = 0;
+
+    for (int i = 0; i < 60; i++) {
+      Scanner input = new Scanner(System.in);
+      System.out.print("Digite o " + i + "º número: ");
+      num = input.nextInt();
+      input.close();
+
+      if (num >= 0 && num <= 25) {
+        count1++;
+
+      } else if (num >= 26 && num <= 50) {
+        count2++;
+
+      } else if (num >= 51 && num <= 75) {
+        count3++;
+
+      } else if (num >= 76 && num <= 100) {
+        count4++;
+
+      } else {
+        System.out.println("Fora do intervalo entre 0 e 100");
+
+      }
+    }
+
+    System.out.println("De 0 - 25: " + count1);
+    System.out.println("De 26 - 50: " + count2);
+    System.out.println("De 51 - 75: " + count3);
+    System.out.println("De 76 - 100: " + count4);
+
+  }
+}
 
 
 7. Faça um programa que leia um valor A e um valor N. Calcule e imprima a soma dos N
@@ -45,14 +207,65 @@ A N SOMA
 3 2 (3+4) = 7
 4 5 (4+5+6+7+8) = 30
 
+class Main {
+  public static void main(String[] args) {
+    int value, count, sum = 0;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o número inicial: ");
+    value = input.nextInt();
+
+    System.out.print("Digite a quantidade de parcelas: ");
+    count = input.nextInt();
+    input.close();
+
+    for (int i = 1; i <= count; i++) {
+      sum += value;
+      value++;
+    }
+
+    System.out.println("Soma: " + sum);
+  }
+}
+
 
 8. Escreva um programa para calcular e escrever o valor de S:
 S = 1/1 + 2/4 + 4/16 + 5/25 + 6/36 + ... 10/100
+
+class Main {
+  public static void main(String[] args) {
+    double count = 0, value = 0;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite o contador: ");
+    count = input.nextInt();
+    input.close();
+
+    for (int num = 1; num < count; num++) {
+      value += (num / Math.pow(num, 2));
+    }
+
+    System.out.println("O valor de S é: " + value);
+  }
+}
 
 
 9. Faça um programa que escreva a tabuada de multiplicação de todos os números inteiros
 de 2 a 9.
 
+class Main {
+  public static void main(String[] args) {
+    int count = 2;
+
+    while (count <= 9) {
+      for (int i = 1; i <= 10; i++) {
+        System.out.println(count + "*" + i + " = " + count * i);
+      }
+      System.out.println("\n");
+      count++;
+    }
+  }
+}
 
 10. A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
 dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja saber: 
@@ -61,6 +274,42 @@ b) média do número de filhos;
 c) maior idade;
 d) percentual de pessoas acima de 60 anos.
 O final da leitura de dados se dará com a entrada de uma idade negativa.
+
+class Main {
+  public static void main(String[] args) {
+    int age, children, count = 1, higher = Integer.MIN_VALUE, sixtyCount = 0, ageSum = 0, childrenSum = 0;
+
+    while (true) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Digite a idade do " + count + "º participante: ");
+      age = input.nextInt();
+
+      if (age == 0) {
+        break;
+      };
+
+      System.out.println("Digite a quantidade de filhos: ");
+      children = input.nextInt();
+      input.close();
+
+      if (age > higher) {
+        higher = age;
+      }
+
+      if (age > 60) {
+        sixtyCount++;
+      }
+
+      childrenSum += children;
+      count++;
+    }
+
+    System.out.println("Media de idade " + ageSum / (count - 1));
+    System.out.println("Media de filhos " + childrenSum / (count - 1));
+    System.out.println("Maior idade " + higher);
+    System.out.println("Percentual de pessoas acima de 60 anos: " + (sixtyCount / (count - 1)) * 100);
+  }
+}
 
 
 11. O departamento que controla o índice de poluição do meio ambiente mantém 3 grupos
@@ -71,11 +320,72 @@ são intimadas a suspenderem suas atividades e se o índice atingir 0,5 todos os
 ser notificados a paralisarem suas atividades. Faça um algoritmo que lê o índice de poluição
 medido e emite a notificação adequada aos diferentes grupos de empresas.
 
+class Main {
+  public static void main(String[] args) {
+    float pollution;
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("Digite o indice de poluição: ");
+    pollution = input.nextInt();
+    input.close();
+
+    if (pollution >= 0.3f) {
+      System.out.println("Empresas do grupo 1 paralisadas.");
+    } else if (pollution >= 0.4f) {
+      System.out.println("Empresas do grupo 1 e grupo 2 paralisadas.");
+    } else if (pollution >= 0.5f) {
+      System.out.println("Empresas do grupo 1, 2 e 3 paralisadas.");
+    }
+  }
+}
+
 
 12. Construir um programa para fazer um levantamento estatístico das respostas de uma
 prova tipo múltipla escolha, considerando que a prova contém 50 questões e que cada
 questão possui 5 opções: A, B, C, D e E. O algoritmo deve apresentar os
 percentuais relativos às quantidades de respostas A, B, C, D e E.
+
+class Main {
+  public static void main(String[] args) {
+    int optionA = 0, optionB = 0, optionC = 0, optionD = 0, optionE = 0;
+    char option;
+
+    for (int i = 0; i < 50; i++) {
+      Scanner input = new Scanner(System.in);
+      System.out.print("Digite a opcao: ");
+      option = input.next().charAt(0);
+      input.close();
+
+      switch (option) {
+        case 'A':
+          optionA++;
+          break;
+        case 'B':
+          optionB++;
+          break;
+        case 'C':
+          optionC++;
+          break;
+        case 'D':
+          optionD++;
+          break;
+        case 'E':
+          optionE++;
+          break;
+        default:
+          System.out.println("Opcao invalida!");
+          break;
+
+      }
+    }
+
+    System.out.println("A: " + (optionA / 50) * 100);
+    System.out.println("B: " + (optionB / 50) * 100);
+    System.out.println("C: " + (optionC / 50) * 100);
+    System.out.println("D: " + (optionD / 50) * 100);
+    System.out.println("E: " + (optionE / 50) * 100);
+  }
+}
 
 
 13. Faça um programa para ler as coordenadas (X, Y) de uma quantidade indeterminada de
@@ -89,6 +399,37 @@ Para os dados de entrada abaixo Deve ser gerada a seguinte saída
 -8 -1 terceiro quadrante
 -7 1 segundo quadrante
 
+class Main {
+  public static void main(String[] args) {
+    int X, Y;
+    while (true) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Digite a posicao X: ");
+      X = input.nextInt();
+
+      System.out.println("Digite a posicao Y: ");
+      Y = input.nextInt();
+      input.close();
+
+      if (X == 0 && Y == 0) {
+        break;
+      }
+      ;
+
+      if (X > 0 && Y > 0) {
+        System.out.println("Primeiro quadrante.");
+      } else if (X < 0 && Y > 0) {
+        System.out.println("Segundo quadrante.");
+      } else if (X < 0 && Y < 0) {
+        System.out.println("Terceiro quadrante.");
+      } else if (X > 0 && Y < 0) {
+        System.out.println("Quarto quadrante.");
+      }
+    }
+    ;
+  }
+}
+
 
 14.A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
 dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja
@@ -99,6 +440,42 @@ saber:
 • percentual de pessoas acima de 60 anos.
 O final da leitura de dados se dará com a entrada de uma idade negativa.
 
+class Main {
+  public static void main(String[] args) {
+    int age, children, count = 1, higher = Integer.MIN_VALUE, sixtyCount = 0, ageSum = 0, childrenSum = 0;
+
+    while (true) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Digite a idade do " + count + "º participante: ");
+      age = input.nextInt();
+
+      if (age == 0) {
+        break;
+      };
+
+      System.out.println("Digite a quantidade de filhos: ");
+      children = input.nextInt();
+      input.close();
+
+      if (age > higher) {
+        higher = age;
+      }
+
+      if (age > 60) {
+        sixtyCount++;
+      }
+
+      childrenSum += children;
+      count++;
+    }
+
+    System.out.println("Media de idade " + ageSum / (count - 1));
+    System.out.println("Media de filhos " + childrenSum / (count - 1));
+    System.out.println("Maior idade " + higher);
+    System.out.println("Percentual de pessoas acima de 60 anos: " + (sixtyCount / (count - 1)) * 100);
+  }
+}
+
 
 15. Crie um programa que peça um número inteiro ao usuário, e imprima a seguinte tabela:
 1
@@ -107,7 +484,50 @@ O final da leitura de dados se dará com a entrada de uma idade negativa.
 4 8 12 16
 ..
 
+class Main {
+  public static void main(String[] args) {
+    int n;
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("Digite um número inteiro: ");
+    n = input.nextInt();
+    input.close();
+
+    for (int i = 1; i <= n; i++) {
+      for (int j = 1; j <= i; j++) {
+        System.out.print(" " + i * j);
+      }
+      System.out.println();
+    }
+  }
+}
+
 
 16.Faça um programa para calcular o k-ésimo dígito da direita para a esquerda de um número
 n. Suponha que k é menor ou igual ao número de dígitos de n. Exemplo: o 3o dígito de 1984
 é 9.
+
+class Main {
+  public static void main(String[] args) {
+    int num, rest, digit, div = 0, quociente;
+
+    Scanner input = new Scanner(System.in);
+    System.out.println("Numero");
+    num = input.nextInt();
+    System.out.println("Dígito");
+    digit = input.nextInt();
+    input.close();
+
+    while (div != digit) {
+      quociente = num / 10;
+      rest = num % 10;
+
+      if (div == digit) {
+        System.out.println(rest);
+      }
+
+      num = quociente;
+      div++;
+    }
+  }
+}

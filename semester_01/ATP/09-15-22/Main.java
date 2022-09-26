@@ -1,34 +1,34 @@
 import java.util.*;
 
-// 9. Faça um programa que leia a distância em Km e a quantidade de litros de gasolina
-// consumidos por um carro em um percurso, calcule o consumo em Km/l e escreva uma
-// mensagem de acordo com a tabela abaixo:
-
+// 14.A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando
+// dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja
+// saber:
+// • média da idade da população;
+// • média do número de filhos;
+// • maior idade;
+// • percentual de pessoas acima de 60 anos.
+// O final da leitura de dados se dará com a entrada de uma idade negativa.
 class Main {
   public static void main(String[] args) {
-    float distance, liters, value;
+    int num, rest, digit, div = 0, quociente;
 
     Scanner input = new Scanner(System.in);
-
-    System.out.print("Digite a quantidade de quilometros: ");
-    distance = input.nextFloat();
-
-    System.out.print("Digite a quantidade de litros: ");
-    liters = input.nextFloat();
-
+    System.out.println("Numero");
+    num = input.nextInt();
+    System.out.println("Dígito");
+    digit = input.nextInt();
     input.close();
 
-    value = distance / liters;
+    while (div != digit) {
+      quociente = num / 10;
+      rest = num % 10;
 
-    if (value < 8) {
-      System.out.println("Venda o carro!");
+      if (div == digit) {
+        System.out.println(rest);
+      }
 
-    } else if (value <= 12) {
-      System.out.println("Economico!");
-
-    } else if (value > 12) {
-      System.out.println("Super economico!");
-
+      num = quociente;
+      div++;
     }
   }
 }
