@@ -27,202 +27,237 @@
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/highlights.css" />
     <link rel="stylesheet" href="./src/styles/esports.css" />
-    <link rel="stylesheet" href="./src/styles/releases.css" />
-    <link rel="stylesheet" href="./src/styles/footer.css" />
   </head>
   <body>
     <header>
-      <div>
-        <a class="logo" href="/">
-          <p>LOGO</p>
-        </a>
-      </div>
-      <div class="links">
-        <a href="#highlights">Destaques</a>
-        <p>|</p>
-        <a href="#esports">eSports</a>
-        <p>|</p>
-        <a href="#releases">Lançamentos</a>
-        <p>|</p>
-        <a href="#">Publishers</a>
-      </div>
-      <div class="input">
-        <img src="./assets/search.png" />
-        <input placeholder="Pesquisar Games" />
-      </div>
-    </header>
-    <main>
-      <section id="highlights" class="highlights">
-        <h1>Destaques</h1>
-        <div class="carousel-container">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GameHub</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div id="item">
-                  <img
-                    src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
-                    alt="..."
-                  />
-                  <div class="about">
-                    <div class="about-texts">
-                      <h1>VALORANT</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Obcaecati, pariatur veniam incidunt provident
-                        exercitationem quasi. Nihil totam vel dolorem modi
-                        eveniet velit aperiam odit ipsum delectus voluptates.
-                        Iure, earum consequatur?
-                      </p>
-                    </div>
-                    <a target="_blank" href="https://playvalorant.com/pt-br/"
-                      >Ir para a página do jogo</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div id="item">
-                  <img
-                    src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/pt_BR/games/switch/m/minecraft-switch/hero"
-                    alt="..."
-                  />
-                  <div class="about">
-                    <div class="about-texts">
-                      <h1>MINECRAFT</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Obcaecati, pariatur veniam incidunt provident
-                        exercitationem quasi. Nihil totam vel dolorem modi
-                        eveniet velit aperiam odit ipsum delectus voluptates.
-                        Iure, earum consequatur?
-                      </p>
-                    </div>
-                    <a target="_blank" href="https://www.minecraft.net/pt-br"
-                      >Ir para a página do jogo</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div id="item">
-                  <img
-                    src="https://estnn.com/wp-content/uploads/2022/05/CS-GO-wallpaper-HD-art_hue3ed7aeab8fceb3ccf3a35de14fc82fb_1114369_1920x1080_resize_q75_lanczos.jpg"
-                    alt="..."
-                  />
-                  <div class="about">
-                    <div class="about-texts">
-                      <h1>CSGO</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Obcaecati, pariatur veniam incidunt provident
-                        exercitationem quasi. Nihil totam vel dolorem modi
-                        eveniet velit aperiam odit ipsum delectus voluptates.
-                        Iure, earum consequatur?
-                      </p>
-                    </div>
-                    <a target="_blank" href="https://blog.counter-strike.net/"
-                      >Ir para a página do jogo</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#highlights">Destaques</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#eSports">eSports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lançamentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                <img src="./assets/search.png" />
+              </button>
+            </form>
           </div>
         </div>
-      </section>
+      </nav>
+    </header>
+    <section id="highlights">
+      <h1>Destaques</h1>
+      <div id="carousel" class="carousel-container">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-label="Slide 1"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class=""
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class=""
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div id="item">
+                <img
+                  src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+                  alt="..."
+                />
+                <div class="about">
+                  <div class="about-texts">
+                    <h1>VALORANT</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Obcaecati, pariatur veniam incidunt provident
+                      exercitationem quasi. Nihil totam vel dolorem modi eveniet
+                      velit aperiam odit ipsum delectus voluptates. Iure, earum
+                      consequatur?
+                    </p>
+                  </div>
+                  <a target="_blank" href="https://playvalorant.com/pt-br/"
+                    >Ir para a página do jogo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="item">
+                <img
+                  src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/pt_BR/games/switch/m/minecraft-switch/hero"
+                  alt="..."
+                />
+                <div class="about">
+                  <div class="about-texts">
+                    <h1>MINECRAFT</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Obcaecati, pariatur veniam incidunt provident
+                      exercitationem quasi. Nihil totam vel dolorem modi eveniet
+                      velit aperiam odit ipsum delectus voluptates. Iure, earum
+                      consequatur?
+                    </p>
+                  </div>
+                  <a target="_blank" href="https://www.minecraft.net/pt-br"
+                    >Ir para a página do jogo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div id="item">
+                <img
+                  src="https://estnn.com/wp-content/uploads/2022/05/CS-GO-wallpaper-HD-art_hue3ed7aeab8fceb3ccf3a35de14fc82fb_1114369_1920x1080_resize_q75_lanczos.jpg"
+                  alt="..."
+                />
+                <div class="about">
+                  <div class="about-texts">
+                    <h1>CSGO</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Obcaecati, pariatur veniam incidunt provident
+                      exercitationem quasi. Nihil totam vel dolorem modi eveniet
+                      velit aperiam odit ipsum delectus voluptates. Iure, earum
+                      consequatur?
+                    </p>
+                  </div>
+                  <a target="_blank" href="https://blog.counter-strike.net/"
+                    >Ir para a página do jogo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="eSports">
+      <h1>eSports</h1>
+      <div class="cards">
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
 
-      <section id="esports" class="esports">
-        <h1>eSports</h1>
-        <div class="cards">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-      </section>
-
-      <section id="releases" class="releases">
-        <h1>Lançamentos</h1>
-        <div class="cards">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="container">
-          <h3>Sobre</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            illo facere voluptate impedit eum, sit qui quidem aliquid rerum,
-            maxime nam blanditiis. Voluptatem voluptatum ipsum ducimus enim
-            blanditiis dolorum atque?
-          </p>
-        </div>
-        <div class="container">
-          <h3>Editorial</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel
-            ratione voluptatum. Vitae vero aut architecto, quam dolor nisi unde
-            cumque, culpa sapiente reiciendis blanditiis eos neque aspernatur
-            consequatur perspiciatis.
-          </p>
-        </div>
-      </footer>
-    </main>
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
+        <a href="">
+          <div class="card">
+            <h1>O Brasil é campeão!</h1>
+            <img
+              src="https://s2.glbimg.com/pItFoIwegODXHdWEZMaH1da_gA4=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/g/i/z4x3ndQ6ODDGmLlWdTyQ/fade-valorant.jpg"
+              alt="..."
+            />
+          </div>
+        </a>
+      </div>
+    </section>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

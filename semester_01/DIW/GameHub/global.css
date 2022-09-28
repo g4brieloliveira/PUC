@@ -1,10 +1,25 @@
 :root {
-  --title: #322153;
-  --primary: #34cb79;
-  --secondary: #190fe6;
+  --primary50: #89ffe5;
+  --primary100: #71f3ce;
+  --primary200: #72dec8;
+  --primary300: #20caa8;
+  --primary400: #1aaf8e;
+  --primary500: #00a786;
+  --primary600: #008465;
+  --primary700: #008465;
+  --primary800: #005b3f;
+  --primary900: #00472e;
 
-  --white: #f0f0f5;
-  --black: #0c0c0c;
+  --neutral0: #ffffff;
+  --neutral25: #fbfbfb;
+  --neutral50: #f6f6f6;
+  --neutral100: #f2f2f2;
+  --neutral200: #e7e7e7;
+  --neutral300: #d2d2d2;
+  --neutral400: #989898;
+  --neutral500: #686868;
+  --neutral600: #434343;
+  --neutral999: #1a1a1a;
 }
 
 * {
@@ -39,12 +54,15 @@ h3,
 h4,
 h5 {
   font-family: "Ubuntu", sans-serif;
-  color: var(--black);
+  color: var(--neutral999);
 }
 
 section {
-  height: 100vh;
-  max-height: fit-content;
+  display: flex;
+  height: 100%;
+  padding: 16px;
+  padding-top: 64px;
   align-items: center;
   justify-content: center;
+  background-color: var(--neutral0);
 }

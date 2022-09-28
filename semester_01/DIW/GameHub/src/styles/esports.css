@@ -1,26 +1,37 @@
-.esports {
-  display: flex;
+#eSports {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--white);
 }
 
-.esports h1 {
-  color: var(--black);
+#eSports h1 {
   font-weight: 700;
 }
 
-.esports .cards {
+.cards {
+  width: 80%;
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.esports .card {
-  width: 300px;
-  height: 150px;
-  background-color: red;
-  border-radius: 8px;
+.cards .card {
+  background-color: var(--primary500);
+  border-radius: 8px 8px 0 0;
+}
+
+.cards .card a {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary500);
+}
+
+.cards .card img {
+  width: 100%;
+}
+
+.cards .card h1 {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 4px;
   margin: auto;
+  color: var(--neutral0);
 }
