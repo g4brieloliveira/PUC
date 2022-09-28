@@ -1,0 +1,36 @@
+footer {
+  background-color: var(--primary500);
+  padding: 16px;
+}
+
+footer .texts h1 {
+  font-weight: 700;
+  color: var(--neutral0);
+}
+
+footer p {
+  color: var(--neutral0);
+}
+
+footer .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer .links img {
+  width: 25px;
+  height: 25px;
+  margin-right: 16px;
+}
+
+footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .copyright p {
+  padding-top: 24px;
+  margin: 0;
+}

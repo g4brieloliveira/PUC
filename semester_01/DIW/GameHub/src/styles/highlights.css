@@ -44,3 +44,9 @@
   border-radius: 12px;
   margin-top: 16px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--primary500);
+  border-radius: 8px;
+}
