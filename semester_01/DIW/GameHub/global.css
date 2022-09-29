@@ -57,6 +57,10 @@ h5 {
   color: var(--neutral999);
 }
 
+p {
+  font-size: 0.8rem;
+}
+
 section {
   display: flex;
   height: 100%;

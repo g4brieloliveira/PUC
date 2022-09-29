@@ -26,8 +26,9 @@
   background-color: var(--primary500);
 }
 
-#eSports .cards .card img {
+#eSports .cards .card iframe {
   width: 100%;
+  height: 100%;
 }
 
 #eSports .cards .card h1 {
