@@ -1,0 +1,59 @@
+:root {
+  --primary500: #a02982;
+
+  --neutral0: #0c0c0c;
+  --neutral25: #fbfbfb;
+  --neutral50: #f6f6f6;
+  --neutral100: #f2f2f2;
+  --neutral200: #e7e7e7;
+  --neutral300: #d2d2d2;
+  --neutral400: #989898;
+  --neutral500: #686868;
+  --neutral600: #434343;
+  --neutral999: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 700;
+}
+a:hover {
+  transition: 0.2s ease all;
+  scale: 0.95;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--neutral999);
+}
+
+section {
+  display: flex;
+  height: 100%;
+  padding: 16px;
+  padding-top: 64px;
+  align-items: center;
+  justify-content: center;
+  background-color: #808080;
+}

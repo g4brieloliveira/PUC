@@ -1,0 +1,39 @@
+#releases {
+  flex-direction: column;
+}
+
+#releases h1 {
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+#releases .cards {
+  width: 80%;
+}
+
+#releases .cards .card {
+  background-color: var(--primary500);
+  border-radius: 8px;
+  border: 1px solid var(--neutral200);
+  margin-bottom: 24px;
+}
+
+#releases .cards .card a {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary500);
+}
+
+#releases .cards .card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+#releases .cards .card h1 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  margin: auto;
+  color: var(--neutral0);
+  text-decoration: underline;
+}

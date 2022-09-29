@@ -1,0 +1,46 @@
+@media screen and (min-width: 1080px) {
+  #highlights #item {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  #highlights .active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #highlights #item img {
+    width: 50%;
+  }
+
+  #highlights #item .about {
+    padding: 0 24px;
+  }
+
+  #eSports .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  #releases .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  #about .texts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  #about .texts .about,
+  #about .texts .social-medias {
+    width: 45%;
+  }
+}
