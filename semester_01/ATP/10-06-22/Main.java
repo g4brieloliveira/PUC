@@ -151,22 +151,37 @@ class Main {
   }
 
   // Exercicio 5
-  // 5) Escreva um método que receba um número inteiro maior do que zero, retorne
-  // e imprima a soma de todos os seus algarismos. Por exemplo, ao número 251
-  // correspondera o valor 8 (2 + 5 + 1). Se o número lido não for maior do que
-  // zero, o programa terminará com a mensagem “Número inválido”.
+  public static int sumDigits(int num) {
+    int sum = 0;
+    System.out.print("A soma dos dígitos ");
+
+    while (num > 0) {
+      System.out.print(num % 10 + " ");
+      sum += (num % 10);
+      num = (num / 10);
+    }
+    System.out.print("é igual a: ");
+
+    return sum;
+  }
+
   public static void Ex5() {
-    double height, radius;
+    int num;
 
     Scanner input = new Scanner(System.in);
 
-    System.out.print("Digite a altura do cilindro: ");
-    height = input.nextDouble();
+    System.out.println("Digite um número maior que 0: ");
+    num = input.nextInt();
 
-    System.out.print("Digite o raio do cilindro: ");
-    radius = input.nextDouble();
-    System.out.println("Volume do cilindro: " + Math.PI * Math.pow(radius, 2) * height);
+    if (num > 0) {
+      System.out.println(sumDigits(num));
+    } else {
+      System.out.println("Número inválido!");
+
+    }
+
     input.close();
+
   }
 
   // Exercicio 6
@@ -230,14 +245,13 @@ class Main {
   }
 
   // Exercicio 9
-  public static int Divisor(int N) {
+  public static int div(int num) {
     int maior = Integer.MIN_VALUE;
-    boolean ehprimo;
-    for (int i = 1; i <= N; i++) {
-      // verifica se é divisor
-      if (N % i == 0) {
-        ehprimo = verificaPrimo(i);
-        if (ehprimo == true) {
+    boolean primo;
+    for (int i = 1; i <= num; i++) {
+      if (num % i == 0) {
+        primo = verificaPrimo(i);
+        if (primo == true) {
           if (i > maior) {
             maior = i;
           }
@@ -248,7 +262,7 @@ class Main {
   }
 
   public static boolean verificaPrimo(int num) {
-    boolean ehprimo = false;
+    boolean primo = false;
     int cont = 0;
 
     for (int i = 1; i <= num; i++) {
@@ -257,38 +271,44 @@ class Main {
       }
     }
     if (cont == 2) {
-      ehprimo = true;
+      primo = true;
     }
-    return ehprimo;
+    return primo;
   }
 
   public static void Ex9() {
-    int N, maiorPrimo;
-    Scanner le = new Scanner(System.in);
-
-    System.out.println("Número");
-    N = le.nextInt();
-    maiorPrimo = Divisor(N);
-    System.out.println("Maior primo: " + maiorPrimo);
-    le.close();
-  }
-
-  // Exercicio 10
-  // 10) Faça um método para verificar se um número é um quadrado perfeito. Um
-  // quadrado perfeito é um número inteiro não negativo que pode ser expresso como
-  // o quadrado de outro número inteiro. Ex: 1, 4, 9...
-  public static void Ex10() {
-    double height, radius;
-
+    int num, maiorPrimo;
     Scanner input = new Scanner(System.in);
 
-    System.out.print("Digite a altura do cilindro: ");
-    height = input.nextDouble();
-
-    System.out.print("Digite o raio do cilindro: ");
-    radius = input.nextDouble();
-    System.out.println("Volume do cilindro: " + Math.PI * Math.pow(radius, 2) * height);
+    System.out.println("Digite um número: ");
+    num = input.nextInt();
+    maiorPrimo = div(num);
+    System.out.println("Maior primo: " + maiorPrimo);
     input.close();
   }
 
+  // Exercicio 10
+  static boolean varificaQuadradoPerfeito(int num) {
+    if (num >= 0) {
+      int raiz = (int) Math.sqrt(num);
+      return ((raiz * raiz) == num);
+    }
+    return false;
+  }
+
+  public static void Ex10() {
+    int num;
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Digite um número: ");
+    num = input.nextInt();
+    input.close();
+
+    if (varificaQuadradoPerfeito(num))
+      System.out.println("O número " + num + " é um quadrado perfeito.");
+    else
+      System.out.println("O número " + num + " não é um quadrado perfeito.");
+
+  }
 }
