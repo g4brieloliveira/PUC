@@ -52,10 +52,7 @@ class Main {
     System.out.println("");
   }
 
-  // Exercicio 1
-  public static void Ex1() {
-    int[][] Arr = new int[5][5];
-
+  public static void populateArray(int[][] Arr, int maxRandom) {
     Random random = new Random();
 
     for (int i = 0; i < Arr.length; i++) {
@@ -63,6 +60,13 @@ class Main {
         Arr[i][j] = random.nextInt(10);
       }
     }
+  }
+
+  // Exercicio 1
+  public static void Ex1() {
+    int[][] Arr = new int[5][5];
+
+    populateArray(Arr, 10);
 
     printArray(Arr);
 
@@ -79,13 +83,7 @@ class Main {
   public static void Ex2() {
     int[][] Arr = new int[10][10];
 
-    Random random = new Random();
-
-    for (int i = 0; i < Arr.length; i++) {
-      for (int j = 0; j < Arr[0].length; j++) {
-        Arr[i][j] = random.nextInt(100);
-      }
-    }
+    populateArray(Arr, 100);
 
     for (int i = 0; i < Arr.length; i++) {
       for (int j = 0; j < Arr[0].length; j++) {
@@ -103,13 +101,7 @@ class Main {
     int[] RowArr = new int[5];
     int[] ColumnArr = new int[5];
 
-    Random random = new Random();
-
-    for (int i = 0; i < Arr.length; i++) {
-      for (int j = 0; j < Arr[0].length; j++) {
-        Arr[i][j] = random.nextInt(10);
-      }
-    }
+    populateArray(Arr, 10);
 
     printArray(Arr);
 
@@ -151,13 +143,7 @@ class Main {
   public static void Ex4() {
     int[][] Arr = new int[2][3];
 
-    Random random = new Random();
-
-    for (int i = 0; i < Arr.length; i++) {
-      for (int j = 0; j < Arr[0].length; j++) {
-        Arr[i][j] = random.nextInt(10);
-      }
-    }
+    populateArray(Arr, 10);
 
     printArray(Arr);
 
@@ -171,13 +157,7 @@ class Main {
   public static void Ex5() {
     int[][] Arr = new int[10][10];
 
-    Random random = new Random();
-
-    for (int i = 0; i < Arr.length; i++) {
-      for (int j = 0; j < Arr[0].length; j++) {
-        Arr[i][j] = random.nextInt(10);
-      }
-    }
+    populateArray(Arr, 10);
 
     printArray(Arr);
 
@@ -214,19 +194,9 @@ class Main {
     int[][] ArrA = new int[arrLength][arrLength];
     int[][] ArrB = new int[arrLength][arrLength];
 
-    Random random = new Random();
+    populateArray(ArrA, 10);
 
-    for (int i = 0; i < ArrA.length; i++) {
-      for (int j = 0; j < ArrA[0].length; j++) {
-        ArrA[i][j] = random.nextInt(10);
-      }
-    }
-
-    for (int i = 0; i < ArrB.length; i++) {
-      for (int j = 0; j < ArrB[0].length; j++) {
-        ArrB[i][j] = random.nextInt(10);
-      }
-    }
+    populateArray(ArrB, 10);
 
     printArray(ArrA);
     printArray(ArrB);
@@ -242,13 +212,7 @@ class Main {
     int higher = Integer.MIN_VALUE;
     int smaller = Integer.MAX_VALUE;
 
-    Random random = new Random();
-
-    for (int i = 0; i < Arr.length; i++) {
-      for (int j = 0; j < Arr[0].length; j++) {
-        Arr[i][j] = random.nextInt(10);
-      }
-    }
+    populateArray(Arr, 10);
 
     printArray(Arr);
 
