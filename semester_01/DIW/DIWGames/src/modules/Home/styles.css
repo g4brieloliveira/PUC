@@ -1,5 +1,13 @@
 #cards div img {
-  width: 500px;
+  width: 80%;
+  height: 180px;
+}
+
+#cards > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal img {

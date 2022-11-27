@@ -37,7 +37,7 @@ async function getDatas() {
 
     var newDiv = document.createElement("div")
 
-    var title = document.createElement("p")
+    var title = document.createElement("h1")
     title.innerText = item.name;
     newDiv.appendChild(title)
 
@@ -65,7 +65,8 @@ async function getDatas() {
     newDiv.appendChild(ratingDiv)
 
     var releaseDate = document.createElement("p")
-    releaseDate.innerText = item.released;
+    var data = new Date(item.released);
+    releaseDate.innerText = data.toLocaleDateString();
     newDiv.appendChild(releaseDate)
 
     var button = document.createElement("button")
