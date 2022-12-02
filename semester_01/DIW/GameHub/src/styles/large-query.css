@@ -42,4 +42,15 @@
   #about .texts .social-medias {
     width: 45%;
   }
+  .modal-content {
+    margin: 50px 70%;
+    width: 30%;
+  }
+
+  #details #content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,37 +1,37 @@
-#eSports {
+#stores {
   flex-direction: column;
 }
 
-#eSports h1 {
+#stores h1 {
   font-weight: 700;
   margin-bottom: 24px;
 }
 
-#eSports .cards {
+#stores .cards {
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
-#eSports .cards .card {
+#stores .cards .card {
   background-color: var(--primary500);
   border-radius: 8px 8px 0 0;
   border: 1px solid var(--neutral200);
 }
 
-#eSports .cards .card a {
+#stores .cards .card a {
   display: flex;
   flex-direction: column;
   background-color: var(--primary500);
 }
 
-#eSports .cards .card img {
+#stores .cards .card img {
   width: 100%;
   height: 100%;
 }
 
-#eSports .cards .card h1 {
+#stores .cards .card h1 {
   text-align: center;
   font-size: 0.8rem;
   padding: 4px;
